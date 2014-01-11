@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F424DDD18620805000AB997 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F424DDA18620805000AB997 /* NSObject+Properties.m */; };
+		5F424DDE18620805000AB997 /* NSString+PropertyKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F424DDC18620805000AB997 /* NSString+PropertyKVC.m */; };
 		5F82552A18615DA8003B3E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F82552918615DA8003B3E4D /* Foundation.framework */; };
 		5F82552C18615DA8003B3E4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F82552B18615DA8003B3E4D /* CoreGraphics.framework */; };
 		5F82552E18615DA8003B3E4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F82552D18615DA8003B3E4D /* UIKit.framework */; };
@@ -14,22 +16,13 @@
 		5F82553618615DA8003B3E4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F82553518615DA8003B3E4D /* main.m */; };
 		5F82553A18615DA8003B3E4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F82553918615DA8003B3E4D /* AppDelegate.m */; };
 		5F82553C18615DA8003B3E4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F82553B18615DA8003B3E4D /* Images.xcassets */; };
-		5F82554318615DA8003B3E4D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F82554218615DA8003B3E4D /* XCTest.framework */; };
-		5F82554418615DA8003B3E4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F82552918615DA8003B3E4D /* Foundation.framework */; };
-		5F82554518615DA8003B3E4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F82552D18615DA8003B3E4D /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5F82554618615DA8003B3E4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F82551E18615DA8003B3E4D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F82552518615DA8003B3E4D;
-			remoteInfo = NSObjectPropertiesExample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		5F424DD918620805000AB997 /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Properties.h"; sourceTree = "<group>"; };
+		5F424DDA18620805000AB997 /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Properties.m"; sourceTree = "<group>"; };
+		5F424DDB18620805000AB997 /* NSString+PropertyKVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PropertyKVC.h"; sourceTree = "<group>"; };
+		5F424DDC18620805000AB997 /* NSString+PropertyKVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PropertyKVC.m"; sourceTree = "<group>"; };
 		5F82552618615DA8003B3E4D /* NSObjectPropertiesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSObjectPropertiesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F82552918615DA8003B3E4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5F82552B18615DA8003B3E4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -41,7 +34,6 @@
 		5F82553818615DA8003B3E4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5F82553918615DA8003B3E4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5F82553B18615DA8003B3E4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5F82554118615DA8003B3E4D /* NSObjectPropertiesExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSObjectPropertiesExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F82554218615DA8003B3E4D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -56,22 +48,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F82553E18615DA8003B3E4D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F82554318615DA8003B3E4D /* XCTest.framework in Frameworks */,
-				5F82554518615DA8003B3E4D /* UIKit.framework in Frameworks */,
-				5F82554418615DA8003B3E4D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F424DD818620805000AB997 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5F424DD918620805000AB997 /* NSObject+Properties.h */,
+				5F424DDA18620805000AB997 /* NSObject+Properties.m */,
+				5F424DDB18620805000AB997 /* NSString+PropertyKVC.h */,
+				5F424DDC18620805000AB997 /* NSString+PropertyKVC.m */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
 		5F82551D18615DA8003B3E4D = {
 			isa = PBXGroup;
 			children = (
+				5F424DD818620805000AB997 /* Classes */,
 				5F82552F18615DA8003B3E4D /* NSObjectPropertiesExample */,
 				5F82552818615DA8003B3E4D /* Frameworks */,
 				5F82552718615DA8003B3E4D /* Products */,
@@ -82,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				5F82552618615DA8003B3E4D /* NSObjectPropertiesExample.app */,
-				5F82554118615DA8003B3E4D /* NSObjectPropertiesExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,24 +134,6 @@
 			productReference = 5F82552618615DA8003B3E4D /* NSObjectPropertiesExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F82554018615DA8003B3E4D /* NSObjectPropertiesExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F82555518615DA8003B3E4D /* Build configuration list for PBXNativeTarget "NSObjectPropertiesExampleTests" */;
-			buildPhases = (
-				5F82553D18615DA8003B3E4D /* Sources */,
-				5F82553E18615DA8003B3E4D /* Frameworks */,
-				5F82553F18615DA8003B3E4D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5F82554718615DA8003B3E4D /* PBXTargetDependency */,
-			);
-			name = NSObjectPropertiesExampleTests;
-			productName = NSObjectPropertiesExampleTests;
-			productReference = 5F82554118615DA8003B3E4D /* NSObjectPropertiesExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,11 +142,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Joseph Constan";
-				TargetAttributes = {
-					5F82554018615DA8003B3E4D = {
-						TestTargetID = 5F82552518615DA8003B3E4D;
-					};
-				};
 			};
 			buildConfigurationList = 5F82552118615DA8003B3E4D /* Build configuration list for PBXProject "NSObjectPropertiesExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -185,7 +156,6 @@
 			projectRoot = "";
 			targets = (
 				5F82552518615DA8003B3E4D /* NSObjectPropertiesExample */,
-				5F82554018615DA8003B3E4D /* NSObjectPropertiesExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,13 +170,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F82553F18615DA8003B3E4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -215,26 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F82553A18615DA8003B3E4D /* AppDelegate.m in Sources */,
+				5F424DDE18620805000AB997 /* NSString+PropertyKVC.m in Sources */,
 				5F82553618615DA8003B3E4D /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F82553D18615DA8003B3E4D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5F424DDD18620805000AB997 /* NSObject+Properties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5F82554718615DA8003B3E4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F82552518615DA8003B3E4D /* NSObjectPropertiesExample */;
-			targetProxy = 5F82554618615DA8003B3E4D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5F82553218615DA8003B3E4D /* InfoPlist.strings */ = {
@@ -346,48 +296,6 @@
 			};
 			name = Release;
 		};
-		5F82555618615DA8003B3E4D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSObjectPropertiesExample.app/NSObjectPropertiesExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSObjectPropertiesExample/NSObjectPropertiesExample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "NSObjectPropertiesExampleTests/NSObjectPropertiesExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5F82555718615DA8003B3E4D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSObjectPropertiesExample.app/NSObjectPropertiesExample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NSObjectPropertiesExample/NSObjectPropertiesExample-Prefix.pch";
-				INFOPLIST_FILE = "NSObjectPropertiesExampleTests/NSObjectPropertiesExampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,15 +313,6 @@
 			buildConfigurations = (
 				5F82555318615DA8003B3E4D /* Debug */,
 				5F82555418615DA8003B3E4D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5F82555518615DA8003B3E4D /* Build configuration list for PBXNativeTarget "NSObjectPropertiesExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F82555618615DA8003B3E4D /* Debug */,
-				5F82555718615DA8003B3E4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
