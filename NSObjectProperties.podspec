@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NSObjectProperties"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Expansion of AQToolkit's NSObject+Properties category"
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.source       = { 
 			               :git => "https://github.com/jcon5294/NSObjectProperties.git",
-			               :tag => '0.0.1'
+			               :tag => '0.0.2'
 		               }
 
   s.source_files = 'Classes/*.{h,m}'

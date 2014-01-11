@@ -95,13 +95,17 @@
     }
     
     const char * cType = [self typeOfPropertyNamed:propertyName];
-    NSMutableString *type = [NSMutableString stringWithUTF8String:cType];
+    NSString *type = [NSString stringWithUTF8String:cType];
     
-    //right now type is something like T@"NSString", so we need to trim those characters
-    [type deleteCharactersInRange:NSMakeRange(0, 3)];
-    [type deleteCharactersInRange:NSMakeRange(type.length-1, 1)];
+    //right now type is something like T@"NSString", so we need to get the proper string
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"T@\"(.*?)\"" options:0 error:nil];
+    NSRange classNameRange = [[regex firstMatchInString:type options:0 range:NSMakeRange(0, type.length)] rangeAtIndex:1];
+    NSString *className = [type substringWithRange:classNameRange];
     
-    return NSClassFromString(type);
+    if (!NSClassFromString(className))
+        NSLog(@"nil class for string: %@", type);
+    
+    return NSClassFromString(className);
 }
 
 + (SEL) getterForPropertyNamed: (NSString *) name
