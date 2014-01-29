@@ -94,16 +94,17 @@
         return nil;
     }
     
-    const char * cType = [self typeOfPropertyNamed:propertyName];
-    NSString *type = [NSString stringWithUTF8String:cType];
+    objc_property_t prop = class_getProperty(self, [propertyName UTF8String]);
+    const char *cAttrs = property_getAttributes(prop);
+    NSString *attrs = [NSString stringWithUTF8String:cAttrs];
     
     //right now type is something like T@"NSString", so we need to get the proper string
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"T@\"(.*?)\"" options:0 error:nil];
-    NSRange classNameRange = [[regex firstMatchInString:type options:0 range:NSMakeRange(0, type.length)] rangeAtIndex:1];
-    NSString *className = [type substringWithRange:classNameRange];
+    NSRange classNameRange = [[regex firstMatchInString:attrs options:0 range:NSMakeRange(0, attrs.length)] rangeAtIndex:1];
+    NSString *className = [attrs substringWithRange:classNameRange];
     
     if (!NSClassFromString(className))
-        NSLog(@"nil class for string: %@", type);
+        NSLog(@"nil class for className: %@, attrs: %@", className, attrs);
     
     return NSClassFromString(className);
 }
@@ -174,7 +175,7 @@
 	if ( count == 0 )
 	{
 		free( properties );
-		return ( nil );
+		return nil;
 	}
 	
 	NSMutableArray * list = [NSMutableArray array];
@@ -182,7 +183,9 @@
 	for ( i = 0; i < count; i++ )
 		[list addObject: [NSString stringWithUTF8String: property_getName(properties[i])]];
 	
-	return ( [list copy] );
+    free(properties);
+    
+	return list;
 }
 
 + (NSArray *) namesForPropertiesOfClass:(Class)theClass
